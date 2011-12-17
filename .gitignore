@@ -4,3 +4,4 @@ files/
 test_files/
 Gemfile.lock
 .yardoc/
+pkg/
