@@ -1,0 +1,6 @@
+.bundle/
+coverage/
+files/
+test_files/
+Gemfile.lock
+.yardoc/
