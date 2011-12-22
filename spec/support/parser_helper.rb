@@ -16,8 +16,17 @@ module ParserHelper
         def description
           %{should parse "#{@_expression}" starting with :#{@_root}}
         end
+        def failure_message
+          %{Grammar should parse "#{@_expression}"!}
+        end
+        def negative_failure_message
+          %{Grammar should not parse "#{@_expression}"!}
+        end
         def matches? parser
           parser.parse(@_root, @_expression).kind_of?(Array)
+          return true
+        rescue RDParser::ParserError
+          return false
         end
       end
       o.instance_variable_set('@_expression', expression)
