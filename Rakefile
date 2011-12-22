@@ -29,12 +29,12 @@ end
 
 task :spec => 'spec:progress'
 
-desc 'Generate documentation for the a4-core plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
+desc 'Generate documentation for the rdparser plugin.'
+RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'RDParser'
   rdoc.options << '--line-numbers' << '--inline-source' << '--charset=UTF-8'
-  rdoc.rdoc_files.include('README')
+  #rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 

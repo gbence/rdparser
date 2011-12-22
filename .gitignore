@@ -5,3 +5,5 @@ test_files/
 Gemfile.lock
 .yardoc/
 pkg/
+.*.swp
+rdoc/

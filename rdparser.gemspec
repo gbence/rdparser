@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.description       = "A Simple Recursive Descending (LL) Parser for Ruby"
   s.rubyforge_project = "rdparser"
 
+  s.add_development_dependency "rdoc"
   s.add_development_dependency "rake"
   s.add_development_dependency "bundler"
   s.add_development_dependency "rspec"
