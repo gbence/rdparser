@@ -1,8 +1,6 @@
 require File.expand_path('../../support/spec_helper', __FILE__)
 
 describe 'A4::Authorization::Parser' do
-  include ParserHelper
-
   parser do |p|
     p.expression    'expression_u binary expression | expression_u'
     p.expression_u  'unary expression_u | "(" expression ")" | role'

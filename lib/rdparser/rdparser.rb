@@ -20,7 +20,7 @@ class RDParser::RDParser
     results = parse_section(rule.to_sym)
 
     # Raises ParserError when cannot get parse the entire content and :partial is not set.
-    raise ::RDParser::ParserError, %{Cannot parse the entire content! (error was on position ##{@content.position}: "#{content[0...@content.position]}|#{content[@content.position..@content.position]}|#{content[@content.position+1..-1]}")} unless options[:partial] == true or @content.eos?
+    raise RDParser::ParseError.new(content, @content.position) unless options[:partial] == true or @content.eos?
 
     [results].flatten
   end
